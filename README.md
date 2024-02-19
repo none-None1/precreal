@@ -1,3 +1,5 @@
+[![Downloads](https://static.pepy.tech/badge/precreal)](https://pepy.tech/project/precreal) [![Downloads](https://static.pepy.tech/badge/precreal/month)](https://pepy.tech/project/precreal) [![Downloads](https://static.pepy.tech/badge/precreal/week)](https://pepy.tech/project/precreal)
+
 This is a Python package to do exact real arithmetic, the following is an example using it:
 
 ```python
