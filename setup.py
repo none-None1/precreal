@@ -1,7 +1,7 @@
 from setuptools import setup
 setup(
     name="precreal",
-    version="1.0.1",
+    version="1.0.3",
     description="A package providing a fraction-based Real class that allows you to do exact real arithmetic, along with some algorithms",
     author="None1",
     packages=["precreal"],

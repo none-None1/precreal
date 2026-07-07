@@ -324,7 +324,7 @@ class Real:
             return Real(0, simplify=self.simplify, precision=self.precision)
         return Real(
             (self.numerator * b.denominator) % (self.denominator * b.numerator),
-            self.denominator * b.numerator,
+            self.denominator * b.denominator,
             simplify=self.simplify,
             precision=self.precision,
         )
@@ -340,6 +340,12 @@ class Real:
     __bool__ = lambda _: _.numerator != 0
     __repr__ = lambda *_: _[0].tostring(*_[1:])
     __str__ = lambda *_: _[0].tostring(*_[1:])
-
+    __radd__ = lambda x,y:Real(y).__add__(x)
+    __rsub__ = lambda x,y:Real(y).__sub__(x)
+    __rmul__ = lambda x,y:Real(y).__mul__(x)
+    __rtruediv__ = lambda x,y:Real(y).__truediv__(x)
+    __rfloordiv__ = lambda x,y:Real(y).__floordiv__(x)
+    __rpow__ = lambda x,y:Real(y).__pow__(x)
+    __rmod__ = lambda x,y:Real(y).__mod__(x)
 
 __all__ = ["Real"]
